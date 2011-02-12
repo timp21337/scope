@@ -33,6 +33,13 @@ public class Caller {
        modifyParam(l);
        System.out.println("local l after:" + l);
 
+       System.out.println();
+
+       String s = "in";
+       System.out.println("local s before:" + s);
+       modifyString(s);
+       System.out.println("local s after:" + s);
+
 
     }
     static void modifyParam(int i) {
@@ -45,5 +52,11 @@ public class Caller {
         System.out.println("param in:" + i);
         i++;
         System.out.println("param out:" + i);
+    }
+
+    static void modifyString(String s){
+        System.out.println("param in:" + s);
+        s = "out";
+        System.out.println("param in:" + s);
     }
 }
