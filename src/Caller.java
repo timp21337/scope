@@ -26,9 +26,22 @@ public class Caller {
        modifyParam(k);
        System.out.println("local k after:" + k);
 
+       System.out.println();
+
+       Integer l = new Integer(0);
+       System.out.println("local l before:" + l);
+       modifyParam(l);
+       System.out.println("local l after:" + l);
+
 
     }
     static void modifyParam(int i) {
+        System.out.println("param in:" + i);
+        i++;
+        System.out.println("param out:" + i);
+    }
+
+    static void modifyParam(Integer i) {
         System.out.println("param in:" + i);
         i++;
         System.out.println("param out:" + i);
