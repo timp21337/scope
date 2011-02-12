@@ -5,8 +5,8 @@
  */
 public class CalledIntParam {
     void modifyParam(int i) {
-        System.out.println("Param in:" + i);
+        System.out.println("param in:" + i);
         i++;
-        System.out.println("Param out:" + i);
+        System.out.println("param out:" + i);
     }
 }

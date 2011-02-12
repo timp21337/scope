@@ -5,8 +5,8 @@
  */
 public class CalledIntegerParam {
     void modifyParam(Integer i) {
-        System.out.println("Param in:" + i);
-        i = i.intValue() + 1;
-        System.out.println("Param out:" + i);
+        System.out.println("param in:" + i);
+        i = new Integer(i.intValue() + 1);
+        System.out.println("param out:" + i);
     }
 }

@@ -10,6 +10,7 @@ public class Caller {
        System.out.println("local i before:" + i);
        new CalledIntParam().modifyParam(i);
        System.out.println("local i after:" + i);
+
        System.out.println();
 
        Integer j = new Integer(0);
@@ -18,5 +19,18 @@ public class Caller {
        new CalledIntegerParam().modifyParam(j);
        System.out.println("local j after:" + j);
 
+       System.out.println();
+
+       int k = 0;
+       System.out.println("local k before:" + k);
+       modifyParam(k);
+       System.out.println("local k after:" + k);
+
+
+    }
+    static void modifyParam(int i) {
+        System.out.println("param in:" + i);
+        i++;
+        System.out.println("param out:" + i);
     }
 }
