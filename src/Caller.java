@@ -81,15 +81,15 @@ public class Caller {
     }
 
     static void modifyParam(NamedObject o) {
-        System.out.println("param in:" + o);
+        System.out.println("param in:" + o.name);
         o.name = "named";
-        System.out.println("param in:" + o);
+        System.out.println("param in:" + o.name);
     }
     static void changeParam(NamedObject o) {
-        System.out.println("param in:" + o);
+        System.out.println("param in:" + o.name);
         o = new NamedObject();
         o.name ="set inside";
-        System.out.println("param in:" + o);
+        System.out.println("param in:" + o.name);
     }
 }
 
