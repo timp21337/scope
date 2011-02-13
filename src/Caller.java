@@ -37,11 +37,31 @@ public class Caller {
 
        String s = "in";
        System.out.println("local s before:" + s);
-       modifyString(s);
+       modifyParam(s);
        System.out.println("local s after:" + s);
+
+       System.out.println();
+
+       NamedObject o = new NamedObject();
+       System.out.println("local o.name before:" + o.name);
+       modifyParam(o);
+       System.out.println("local o.name after:" + o.name);
+
+       System.out.println();
+
+       NamedObject o2 = new NamedObject();
+       o2.name = "Set outside";
+       System.out.println("local o2.name before:" + o2.name);
+       changeParam(o2);
+       System.out.println("local o2.name after:" + o2.name);
+
+       System.out.println();
 
 
     }
+
+
+
     static void modifyParam(int i) {
         System.out.println("param in:" + i);
         i++;
@@ -54,9 +74,26 @@ public class Caller {
         System.out.println("param out:" + i);
     }
 
-    static void modifyString(String s){
+    static void modifyParam(String s){
         System.out.println("param in:" + s);
         s = "out";
         System.out.println("param in:" + s);
     }
+
+    static void modifyParam(NamedObject o) {
+        System.out.println("param in:" + o);
+        o.name = "named";
+        System.out.println("param in:" + o);
+    }
+    static void changeParam(NamedObject o) {
+        System.out.println("param in:" + o);
+        o = new NamedObject();
+        o.name ="set inside";
+        System.out.println("param in:" + o);
+    }
+}
+
+class NamedObject {
+  String name;
+
 }
